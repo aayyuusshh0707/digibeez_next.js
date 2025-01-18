@@ -14,7 +14,7 @@ import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo, SunFilledIcon, MoonFilledIcon, LogoDark} from "@/components/icons";
 import {Divider} from "@heroui/divider";
-
+import {Button, ButtonGroup} from "@heroui/button";
  
 export const Navbar = () => {
   return (
@@ -50,11 +50,11 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
+      
+
+      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full  " justify="end" > 
+        <NavbarItem className="hidden sm:flex gap-10">
+         <Button color="warning">Book Free Demo</Button>
         <ThemeSwitch
         sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
         moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
@@ -63,28 +63,35 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+    
       <ThemeSwitch
         sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
         moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
         />
         <NavbarMenuToggle />
+       
       </NavbarContent>
 
       {/* Add NavbarMenu here */}
+
       <NavbarMenu>
+      <div className=" flex justify-center flex-col gap-2 ">
         {siteConfig.navItems.map((item) => (
-          <NavbarMenuItem key={item.href}>
-            <NextLink
+          <NavbarMenuItem  key={item.href}>
+            
+            <NextLink style={{backgroundColor:'#E5E6E4' , padding:'5px',fontSize:'15px', borderRadius:'9px'}}
               className={clsx(
-                linkStyles({ color: "foreground" }),
-                "w-full text-lg"
+                linkStyles({ color: "foreground"   }),
+                "w-full text-lg flex justify-center bg-grey  gap-2 "
               )}
               href={item.href}
             >
               {item.label}
             </NextLink>
           </NavbarMenuItem>
-        ))}
+        ))}<Button color="warning">Book Free Demo</Button>
+        <Button color="danger">Log in</Button>
+        </div>
       </NavbarMenu>
   
     </HeroUINavbar>
