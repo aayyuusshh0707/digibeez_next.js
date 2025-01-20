@@ -52,9 +52,9 @@ export const Navbar = () => {
 
       
 
-      <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full  " justify="end" > 
+      <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full" justify="end" > 
         <NavbarItem className=" hidden sm:flex gap-10">
-         <Button color="warning">Book Free Demo</Button>
+         <Button className=" bg-amber-400 dark:text-black" >Book Free Demo</Button>
         <ThemeSwitch
         sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
         moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
