@@ -52,8 +52,8 @@ export const Navbar = () => {
 
       
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full  " justify="end" > 
-        <NavbarItem className="hidden sm:flex gap-10">
+      <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full  " justify="end" > 
+        <NavbarItem className=" hidden sm:flex gap-10">
          <Button color="warning">Book Free Demo</Button>
         <ThemeSwitch
         sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
@@ -62,7 +62,7 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
     
       <ThemeSwitch
         sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
@@ -75,14 +75,14 @@ export const Navbar = () => {
       {/* Add NavbarMenu here */}
 
       <NavbarMenu>
-      <div className=" flex justify-center flex-col gap-2 ">
+      <div className="  flex justify-center flex-col gap-2 ">
         {siteConfig.navItems.map((item) => (
           <NavbarMenuItem  key={item.href}>
             
-            <NextLink style={{backgroundColor:'#E5E6E4' , padding:'5px',fontSize:'15px', borderRadius:'9px'}}
+            <NextLink style={{ backgroundColor:'#E5E6E4' , padding:'5px',fontSize:'15px', borderRadius:'9px'}}
               className={clsx(
                 linkStyles({ color: "foreground"   }),
-                "w-full text-lg flex justify-center bg-grey  gap-2 "
+                "w-full text-lg flex justify-center bg-grey  gap-2 dark:text-black "
               )}
               href={item.href}
             >
