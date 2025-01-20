@@ -2,6 +2,7 @@
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { title, subtitle } from "@/components/primitives";
 import { Cover } from "../ui/cover";
+import { BackgroundLines } from "@/components/ui/background-lines";
 
 export function Herosection() {
   const words = [
@@ -24,7 +25,8 @@ export function Herosection() {
 
   ];
   return (
-    <div className="flex flex-col items-center justify-center  ">
+    <BackgroundLines>
+    <div className="flex flex-col items-center justify-center ">
       <div className={subtitle({ class: "mb-10 max-w-xl text-center justify-center" })}>
         The road to freedom starts here
       </div>
@@ -39,5 +41,6 @@ export function Herosection() {
         </button>
       </div>
     </div>
+    </BackgroundLines>
   );
 }

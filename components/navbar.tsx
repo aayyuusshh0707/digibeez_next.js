@@ -1,3 +1,4 @@
+'use client'
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -15,7 +16,8 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo, SunFilledIcon, MoonFilledIcon, LogoDark} from "@/components/icons";
 import {Divider} from "@heroui/divider";
 import {Button, ButtonGroup} from "@heroui/button";
- 
+import Bookdemo from "./Bookdemo";
+
 export const Navbar = () => {
   return (
     <>
@@ -54,7 +56,8 @@ export const Navbar = () => {
 
       <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full" justify="end" > 
         <NavbarItem className=" hidden sm:flex gap-10">
-         <Button className=" bg-amber-400 dark:text-black" >Book Free Demo</Button>
+      
+        <Bookdemo/>
         <ThemeSwitch
         sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
         moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
@@ -99,3 +102,4 @@ export const Navbar = () => {
      </>
   );
 };
+
