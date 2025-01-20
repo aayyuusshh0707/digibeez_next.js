@@ -26,7 +26,7 @@ export function Herosection() {
   ];
   return (
     <BackgroundLines>
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center">
       <div className={subtitle({ class: "mb-10 max-w-xl text-center justify-center" })}>
         The road to freedom starts here
       </div>
