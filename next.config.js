@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
-const  nextConfig = {
+const nextConfig = {
   images: {
-    domains: ["images.unsplash.com"], // Note: changed Images -> images (case sensitive)
+    domains: ["images.unsplash.com"],
   },
 };
 
 module.exports = nextConfig;
-
