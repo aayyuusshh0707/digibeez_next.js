@@ -13,93 +13,94 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo, SunFilledIcon, MoonFilledIcon, LogoDark} from "@/components/icons";
-import {Divider} from "@heroui/divider";
-import {Button, ButtonGroup} from "@heroui/button";
-//import Bookdemo from "./Bookdemo";
+import { Logo, SunFilledIcon, MoonFilledIcon, LogoDark } from "@/components/icons";
+import { Divider } from "@heroui/divider";
+import { Button, ButtonGroup } from "@heroui/button";
+import Bookdemo from "./Bookdemo";
 
 export const Navbar = () => {
   return (
     <>
-    <HeroUINavbar maxWidth="xl" position="sticky">
-    <NavbarContent className=" start">
-      <NextLink className="  flex justify-start items-center gap-1 " href="/">
-       <ThemeSwitch
-       lightLogo={<Logo className="w-8 h-8" />}
-       darkLogo={<LogoDark className="w-8 h-8" />}
-        />
-      </NextLink>
-    </NavbarContent>
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit ">
-          
-        </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
-      </NavbarContent>
+      <HeroUINavbar maxWidth="xl" position="sticky">
+        <NavbarContent className=" start">
+          <NextLink className="  flex justify-start items-center gap-1 " href="/">
+            <ThemeSwitch
+              lightLogo={<Logo className="w-8 h-8" />}
+              darkLogo={<LogoDark className="w-8 h-8" />}
+            />
+          </NextLink>
+        </NavbarContent>
+        <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+          <NavbarBrand as="li" className="gap-3 max-w-fit ">
 
-      
+          </NavbarBrand>
+          <ul className="hidden lg:flex gap-4 justify-start ml-2">
+            {siteConfig.navItems.map((item) => (
+              <NavbarItem key={item.href}>
+                <NextLink
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  )}
+                  color="foreground"
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              </NavbarItem>
+            ))}
+          </ul>
+        </NavbarContent>
 
-      <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full" justify="end" > 
-        <NavbarItem className=" hidden sm:flex gap-10">
-      
-        {/* <Bookdemo/> */}
-        <ThemeSwitch
-        sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
-        moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
-        />
-        </NavbarItem>
-      </NavbarContent>
 
-      <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
-    
-      <ThemeSwitch
-        sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
-        moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
-        />
-        <NavbarMenuToggle />
-       
-      </NavbarContent>
 
-      {/* Add NavbarMenu here */}
+        <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full" justify="end" >
+          <NavbarItem className=" hidden sm:flex gap-10">
 
-      <NavbarMenu>
-      <div className="  flex justify-center flex-col gap-2 ">
-        {siteConfig.navItems.map((item) => (
-          <NavbarMenuItem  key={item.href}>
-            
-            <NextLink style={{ backgroundColor:'#E5E6E4' , padding:'5px',fontSize:'15px', borderRadius:'9px'}}
-              className={clsx(
-                linkStyles({ color: "foreground"   }),
-                "w-full text-lg flex justify-center bg-grey  gap-2 dark:text-black "
-              )}
-              href={item.href}
-            >
-              {item.label}
-            </NextLink>
-          </NavbarMenuItem>
-        ))}<Button color="warning">Book Free Demo</Button>
-        <Button color="danger">Log in</Button>
-        </div>
-      </NavbarMenu>
-  
-    </HeroUINavbar>
-     <Divider/>
-     </>
+            <Bookdemo />
+            <ThemeSwitch
+              sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
+              moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
+            />
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
+
+          <ThemeSwitch
+            sunIcon={<SunFilledIcon size={22} className="text-yellow-500" />}
+            moonIcon={<MoonFilledIcon size={22} className="text-gray-400" />}
+          />
+          <NavbarMenuToggle />
+
+        </NavbarContent>
+
+        {/* Add NavbarMenu here */}
+
+        <NavbarMenu>
+          <div className="  flex justify-center flex-col gap-2 ">
+            {siteConfig.navItems.map((item) => (
+              <NavbarMenuItem key={item.href}>
+
+                <NextLink style={{ backgroundColor: '#E5E6E4', padding: '5px', fontSize: '15px', borderRadius: '9px' }}
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "w-full text-lg flex justify-center bg-grey  gap-2 dark:text-black "
+                  )}
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              </NavbarMenuItem>
+            ))}
+            <Bookdemo />
+            <Button color="danger">Log in</Button>
+          </div>
+        </NavbarMenu>
+
+      </HeroUINavbar>
+      <Divider />
+    </>
   );
 };
 
