@@ -2,6 +2,9 @@
 import React from "react";
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { title, subtitle } from "@/components/primitives";
+import { Button } from "@heroui/button";
+import { CiCircleChevDown } from "react-icons/ci";
+import { FcPlus } from "react-icons/fc";
 
 export function Herosection() {
 
@@ -48,6 +51,9 @@ export function Herosection() {
           <button className="w-40 h-10 rounded-xl border-black bg-amber-400 dark:text-black text-sm">
             Join now
           </button>
+          <Button variant="bordered" className="dark:text-black text-white">
+            Explore Now<CiCircleChevDown />
+          </Button>
         </div>
       </div>
     </div>
