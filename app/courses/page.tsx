@@ -1,9 +1,11 @@
 import { title } from "@/components/primitives";
+import { Courses } from "./components/courses";
 
 export default function DocsPage() {
   return (
-    <div>
-      <h1 className={title()}>Courses</h1>
-    </div>
+    <>
+      <Courses />
+    </>
   );
 }
+
