@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "../utils/utils";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
+
+import { cn } from "../utils/utils";
 
 export const TypewriterEffect = ({
   words,
@@ -26,6 +27,7 @@ export const TypewriterEffect = ({
 
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+
   useEffect(() => {
     if (isInView) {
       animate(
@@ -39,7 +41,7 @@ export const TypewriterEffect = ({
           duration: 0.3,
           delay: stagger(0.1),
           ease: "easeInOut",
-        }
+        },
       );
     }
   }, [isInView]);
@@ -49,15 +51,18 @@ export const TypewriterEffect = ({
       <motion.div ref={scope} className="inline ">
         {wordsArray.map((word, idx) => {
           return (
-            <div key={`word-${idx}`} className="inline-block  text-3xl md:text-5xl lg:text-6xl  ">
+            <div
+              key={`word-${idx}`}
+              className="inline-block  text-3xl md:text-5xl lg:text-6xl  "
+            >
               {word.text.map((char, index) => (
                 <motion.span
-                  initial={{}}
                   key={`char-${index}`}
                   className={cn(
                     `dark:text-white text-black opacity-0 hidden`,
-                    word.className
+                    word.className,
                   )}
+                  initial={{}}
                 >
                   {char}
                 </motion.span>
@@ -69,31 +74,32 @@ export const TypewriterEffect = ({
       </motion.div>
     );
   };
+
   return (
     <div
       className={cn(
         "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center",
-        className
+        className,
       )}
     >
       {renderWords()}
       <motion.span
-        initial={{
-          opacity: 0,
-        }}
         animate={{
           opacity: 1,
+        }}
+        className={cn(
+          "inline-block rounded-sm w-[4px] h-7 md:h-11 lg:h-13 bg-blue-500",
+          cursorClassName,
+        )}
+        initial={{
+          opacity: 0,
         }}
         transition={{
           duration: 0.8,
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className={cn(
-          "inline-block rounded-sm w-[4px] h-7 md:h-11 lg:h-13 bg-blue-500",
-          cursorClassName
-        )}
-      ></motion.span>
+      />
     </div>
   );
 };
@@ -146,13 +152,13 @@ export const TypewriterEffectSmooth = ({
         initial={{
           width: "0%",
         }}
-        whileInView={{
-          width: "fit-content",
-        }}
         transition={{
           duration: 2,
           ease: "linear",
           delay: 1,
+        }}
+        whileInView={{
+          width: "fit-content",
         }}
       >
         <div
@@ -165,11 +171,15 @@ export const TypewriterEffectSmooth = ({
         </div>{" "}
       </motion.div>
       <motion.span
-        initial={{
-          opacity: 0,
-        }}
         animate={{
           opacity: 1,
+        }}
+        className={cn(
+          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
+          cursorClassName,
+        )}
+        initial={{
+          opacity: 0,
         }}
         transition={{
           duration: 0.8,
@@ -177,20 +187,7 @@ export const TypewriterEffectSmooth = ({
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className={cn(
-          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
-          cursorClassName
-        )}
-      ></motion.span>
+      />
     </div>
   );
 };
-
-
-
-
-
-
-
-
-

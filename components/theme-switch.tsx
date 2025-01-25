@@ -31,25 +31,20 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const {
-    Component,
-    slots,
-    getBaseProps,
-    getInputProps,
-    getWrapperProps,
-  } = useSwitch({
-    isSelected: theme === "light" || isSSR,
-    "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
-    onChange,
-  });
+  const { Component, slots, getBaseProps, getInputProps, getWrapperProps } =
+    useSwitch({
+      isSelected: theme === "light" || isSSR,
+      "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
+      onChange,
+    });
 
   return (
     <Component
       {...getBaseProps({
         className: clsx(
-        "px-px transition-opacity hover:opacity-80 cursor-pointer",
-        className,
-        classNames?.base
+          "px-px transition-opacity hover:opacity-80 cursor-pointer",
+          className,
+          classNames?.base,
         ),
       })}
     >
@@ -63,7 +58,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         {...getWrapperProps()}
         className={clsx(
           "flex items-center justify-center gap-4 rounded-lg !text-default-500",
-          classNames?.wrapper
+          classNames?.wrapper,
         )}
       >
         {/* Render Sun/Moon Icon */}

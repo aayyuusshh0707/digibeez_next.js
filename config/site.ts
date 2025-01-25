@@ -8,16 +8,16 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-     {
+    {
       label: "Courses",
       href: "/courses",
-    }, 
+    },
     {
       label: "Services",
       href: "/services",
     },
-   
-  {
+
+    {
       label: "Blog",
       href: "/blog",
     },
@@ -25,7 +25,6 @@ export const siteConfig = {
       label: "About",
       href: "/about",
     },
-   
   ],
   navMenuItems: [
     {

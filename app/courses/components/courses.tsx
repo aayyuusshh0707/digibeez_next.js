@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import React from "react";
 // import { ArrowRight } from "lucide-react";
-import Image from 'next/image'
+import Image from "next/image";
 
 export function Courses() {
   return (
@@ -13,9 +13,9 @@ export function Courses() {
             <div className="text-white dark:text-gray-300">
               <div className="relative z-10 flex gap-3">
                 <Image
-                  src="https://files.codingninjas.com/fir-professional-tag-.webp"
                   alt="star-icon"
                   className="h-8 w-[132px]"
+                  src="https://files.codingninjas.com/fir-professional-tag-.webp"
                 />
               </div>
               <h1 className="text-xl md:text-2xl lg:text-[32px] font-bold leading-tight text-[#fafafa] dark:text-gray-100 mt-6">
@@ -49,9 +49,9 @@ export function Courses() {
                     className="bg-[#2f2f31] dark:bg-gray-800 text-[#979797] dark:text-gray-500 flex items-center gap-2 px-3 py-2 rounded-full"
                   >
                     <img
-                      src={feature.icon}
                       alt={feature.text}
                       className="h-5 w-5"
+                      src={feature.icon}
                     />
                     <span className="text-xs font-bold">{feature.text}</span>
                   </div>
@@ -74,7 +74,7 @@ export function Courses() {
                       </p>
                     </div>
                     {index < array.length - 1 && (
-                      <div className="hidden md:block border-l border-[#394871] dark:border-gray-700"></div>
+                      <div className="hidden md:block border-l border-[#394871] dark:border-gray-700" />
                     )}
                   </React.Fragment>
                 ))}
@@ -82,9 +82,9 @@ export function Courses() {
               <div className="flex items-center text-sm md:text-base text-[#bbbbbb] dark:text-gray-400 mt-6">
                 Know in-depth details in our free webinar
                 <Image
-                  src="https://files.codingninjas.in/hand_04-34708.webp"
                   alt="Pointing finger icon"
                   className="h-8 w-8 ml-3 hidden sm:block"
+                  src="https://files.codingninjas.in/hand_04-34708.webp"
                 />
               </div>
             </div>
@@ -108,9 +108,9 @@ export function Courses() {
                     Name <span className="text-[#f6655a]">*</span>
                   </label>
                   <input
-                    type="text"
-                    placeholder="Enter name"
                     className="h-10 w-full px-4 border border-gray-300 rounded-lg text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 focus:outline-none"
+                    placeholder="Enter name"
+                    type="text"
                   />
                 </div>
                 <div>
@@ -118,9 +118,9 @@ export function Courses() {
                     Email <span className="text-[#f6655a]">*</span>
                   </label>
                   <input
-                    type="email"
-                    placeholder="Email"
                     className="h-10 w-full px-4 border border-gray-300 rounded-lg text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 focus:outline-none"
+                    placeholder="Email"
+                    type="email"
                   />
                 </div>
                 <div>
@@ -130,21 +130,21 @@ export function Courses() {
                   <div className="flex h-10 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
                     <div className="flex items-center px-3 border-r border-gray-300 dark:border-gray-600">
                       <Image
-                        src="https://files.codingninjas.com/flag-5-1732876121.webp"
                         alt="Indian Flag"
                         className="h-5 w-5"
+                        src="https://files.codingninjas.com/flag-5-1732876121.webp"
                       />
                     </div>
                     <input
-                      type="tel"
-                      placeholder="Phone number"
                       className="flex-1 px-4 text-sm dark:bg-gray-700 dark:text-gray-200 focus:outline-none"
+                      placeholder="Phone number"
+                      type="tel"
                     />
                   </div>
                 </div>
                 <button
-                  type="submit"
                   className="h-12 w-full bg-amber-500 text-white font-bold text-base rounded-lg flex items-center justify-center gap-3 mt-4"
+                  type="submit"
                 >
                   Continue booking webinar
                   {/* <ArrowRight className="h-5 w-5" /> */}

@@ -5,9 +5,7 @@ export default function DocsLayout({
 }) {
   return (
     <section className="flex flex-col items-center justify-center">
-      <div className="inline-block   justify-center">
-        {children}
-      </div>
+      <div className="inline-block   justify-center">{children}</div>
     </section>
   );
 }

@@ -4,14 +4,12 @@ import { TimelineDemo } from "@/components/Home/TimelineDemo";
 export default function Home() {
   return (
     <section className="box-border flex flex-col items-center gap-10 p-8">
- 
       <div className="w-full">
-      <Herosection />
+        <Herosection />
       </div>
 
-   
       <div className="w-full mt-0 md:mt-32 ">
-     <TimelineDemo/>
+        <TimelineDemo />
       </div>
     </section>
   );

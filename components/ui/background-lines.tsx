@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "@/components/utils/utils";
 import { motion } from "framer-motion";
 import React from "react";
+
+import { cn } from "@/components/utils/utils";
 
 export const BackgroundLines = ({
   children,
@@ -19,7 +20,7 @@ export const BackgroundLines = ({
     <div
       className={cn(
         "h-[20rem] md:h-screen w-full bg-white dark:bg-black",
-        className
+        className,
       )}
     >
       <SVG svgOptions={svgOptions} />
@@ -91,25 +92,26 @@ const SVG = ({
     "#6A286F",
     "#604483",
   ];
+
   return (
     <motion.svg
-      viewBox="0 0 1440 900"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
       className="absolute inset-0 w-full h-full"
+      fill="none"
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      viewBox="0 0 1440 900"
+      xmlns="http://www.w3.org/2000/svg"
     >
       {paths.map((path, idx) => (
         <motion.path
-          d={path}
-          stroke={colors[idx]}
-          strokeWidth="2.3"
-          strokeLinecap="round"
-          variants={pathVariants}
-          initial="initial"
+          key={`path-first-${idx}`}
           animate="animate"
+          d={path}
+          initial="initial"
+          stroke={colors[idx]}
+          strokeLinecap="round"
+          strokeWidth="2.3"
           transition={{
             duration: svgOptions?.duration || 10,
             ease: "linear",
@@ -118,20 +120,20 @@ const SVG = ({
             delay: Math.floor(Math.random() * 10),
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
-          key={`path-first-${idx}`}
+          variants={pathVariants}
         />
       ))}
 
       {/* duplicate for more paths */}
       {paths.map((path, idx) => (
         <motion.path
-          d={path}
-          stroke={colors[idx]}
-          strokeWidth="2.3"
-          strokeLinecap="round"
-          variants={pathVariants}
-          initial="initial"
+          key={`path-second-${idx}`}
           animate="animate"
+          d={path}
+          initial="initial"
+          stroke={colors[idx]}
+          strokeLinecap="round"
+          strokeWidth="2.3"
           transition={{
             duration: svgOptions?.duration || 10,
             ease: "linear",
@@ -140,7 +142,7 @@ const SVG = ({
             delay: Math.floor(Math.random() * 10),
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
-          key={`path-second-${idx}`}
+          variants={pathVariants}
         />
       ))}
     </motion.svg>

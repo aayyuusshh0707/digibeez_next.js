@@ -2,11 +2,12 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
+
 import { Providers } from "./providers";
+
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-
 
 export const metadata: Metadata = {
   title: {
@@ -24,7 +25,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
-  
 };
 
 export default function RootLayout({
@@ -44,9 +44,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen mb-8">
             <Navbar />
-            <main className="">
-              {children}
-            </main>
+            <main className="">{children}</main>
             <footer className="w-full flex items-center justify-center py-3 mt-5 ">
               <Link
                 isExternal

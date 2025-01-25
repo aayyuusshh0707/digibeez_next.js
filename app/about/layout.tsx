@@ -3,11 +3,5 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <section className="m-5">
-    
-        {children}
-   
-    </section>
-  );
+  return <section className="m-5">{children}</section>;
 }
