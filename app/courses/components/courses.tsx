@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 // import { ArrowRight } from "lucide-react";
+import Image from 'next/image'
 
 export function Courses() {
   return (
@@ -11,7 +12,7 @@ export function Courses() {
           <div className="mt-6 lg:mt-10 lg:mb-10">
             <div className="text-white dark:text-gray-300">
               <div className="relative z-10 flex gap-3">
-                <img
+                <Image
                   src="https://files.codingninjas.com/fir-professional-tag-.webp"
                   alt="star-icon"
                   className="h-8 w-[132px]"
@@ -80,7 +81,7 @@ export function Courses() {
               </div>
               <div className="flex items-center text-sm md:text-base text-[#bbbbbb] dark:text-gray-400 mt-6">
                 Know in-depth details in our free webinar
-                <img
+                <Image
                   src="https://files.codingninjas.in/hand_04-34708.webp"
                   alt="Pointing finger icon"
                   className="h-8 w-8 ml-3 hidden sm:block"
@@ -128,7 +129,7 @@ export function Courses() {
                   </label>
                   <div className="flex h-10 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
                     <div className="flex items-center px-3 border-r border-gray-300 dark:border-gray-600">
-                      <img
+                      <Image
                         src="https://files.codingninjas.com/flag-5-1732876121.webp"
                         alt="Indian Flag"
                         className="h-5 w-5"
