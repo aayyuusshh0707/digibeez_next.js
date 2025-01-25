@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 
 export function Courses() {
   return (
@@ -146,7 +146,7 @@ export function Courses() {
                   className="h-12 w-full bg-amber-500 text-white font-bold text-base rounded-lg flex items-center justify-center gap-3 mt-4"
                 >
                   Continue booking webinar
-                  <ArrowRight className="h-5 w-5" />
+                  {/* <ArrowRight className="h-5 w-5" /> */}
                 </button>
               </form>
             </div>

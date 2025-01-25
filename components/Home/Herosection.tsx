@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import { TypewriterEffect } from "../ui/typewriter-effect";
-import { title, subtitle } from "@/components/primitives";
+import { subtitle } from "@/components/primitives";
 import { Button } from "@heroui/button";
-import { BackgroundLines } from "../ui/background-lines";
 
 export function Herosection() {
   

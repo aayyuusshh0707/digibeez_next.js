@@ -1,6 +1,5 @@
 import { Herosection } from "@/components/Home/Herosection";
 import { TimelineDemo } from "@/components/Home/TimelineDemo";
-import Loader from "@/components/Loader";
 
 export default function Home() {
   return (
