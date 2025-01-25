@@ -5,13 +5,13 @@ import Loader from "@/components/Loader";
 export default function Home() {
   return (
     <section className="box-border flex flex-col items-center gap-10 p-8">
-      {/* Hero Section */}
+ 
       <div className="w-full">
       <Herosection />
       </div>
 
-      {/* Loader */}
-      <div className="w-full">
+   
+      <div className="w-full mt-0 md:mt-32 ">
      <TimelineDemo/>
       </div>
     </section>
